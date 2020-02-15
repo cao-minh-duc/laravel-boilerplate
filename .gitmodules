@@ -1,0 +1,3 @@
+[submodule "packages/cao-minh-duc/storefront-ui"]
+	path = packages/cao-minh-duc/storefront-ui
+	url = https://github.com/cao-minh-duc/storefront-ui

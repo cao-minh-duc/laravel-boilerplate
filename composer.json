@@ -9,8 +9,15 @@
         "boilerplate"
     ],
     "license": "MIT",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "packages/cao-minh-duc/storefront-ui"
+        }
+    ],
     "require": {
         "php": "^7.2",
+        "cao-minh-duc/storefront-ui": "@dev",
         "cao-minh-duc/l5-repository": "*",
         "cao-minh-duc/livewire-datatable": "dev-master",
         "fideloper/proxy": "^4.0",
