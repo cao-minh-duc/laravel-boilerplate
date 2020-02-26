@@ -34,7 +34,7 @@ You can now access the server at http://localhost:8000
     
 **Make sure you set the correct database connection information before running the migrations** [Environment variables](#environment-variables)
 
-    composer full-install
+    composer full-update
     php artisan serve
 
 ## Update
