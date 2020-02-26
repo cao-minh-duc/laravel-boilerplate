@@ -10,18 +10,17 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    <link href="{{ config('app.env') === 'production' ? mix('css/app.css') : mix('css/dev/app.css') }}" rel="stylesheet">
     
     @livewireStyles
 </head>
 <body class="container h-screen mx-auto">
-    @livewire(\CaoMinhDuc\StorefrontUi\Layouts\Menu::class)
+    @include('layouts.menu')
     <div>
         @yield('content')
     </div>
-    @livewire(\CaoMinhDuc\StorefrontUi\Layouts\Footer::class)
     <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}"></script>
+    <script src="{{ config('app.env') === 'production' ? mix('css/app.css') : mix('css/dev/app.css') }}"></script>
     <script src="https://kit.fontawesome.com/38243d5f71.js"></script>
     @livewireScripts
 </body>

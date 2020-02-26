@@ -14,12 +14,14 @@ require('laravel-mix-purgecss');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-   .postCss('resources/css/app.css', 'public/css')
-   .tailwind('./tailwind.config.js');
-
 if (mix.inProduction()) {
-  mix
-   .version()
-   .purgeCss();
+   mix.js('resources/js/app.js', 'public/js')
+         .postCss('resources/css/app.css', 'public/css')
+         .tailwind('./tailwind.config.js')
+         .version()
+         .purgeCss();
+}else{
+   mix.js('resources/js/app.js', 'public/dev/js')
+         .postCss('resources/css/app.css', 'public/dev/css')
+         .tailwind('./tailwind.config.js')
 }

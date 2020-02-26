@@ -17,15 +17,11 @@
     ],
     "require": {
         "php": "^7.2",
-        "cao-minh-duc/storefront-ui": "@dev",
-        "cao-minh-duc/l5-repository": "*",
-        "cao-minh-duc/livewire-datatable": "dev-master",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.2",
         "laravel/tinker": "^2.0",
         "league/flysystem-aws-s3-v3": "^1.0",
         "league/fractal": "^0.19.2",
-        "mad-web/laravel-initializer": "^2.0",
         "spatie/laravel-medialibrary": "^7.0.0"
     },
     "require-dev": {
@@ -82,10 +78,10 @@
             "@php artisan key:generate --ansi"
         ],
         "full-update": [
-            "@php artisan app:update"
-        ],
-        "full-install": [
-            "@php artisan app:install"
+            "composer update",
+            "npm install",
+            "npm run dev",
+            "npm run production"
         ]
     }
 }

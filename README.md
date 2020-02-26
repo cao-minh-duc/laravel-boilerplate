@@ -30,7 +30,7 @@ You can now access the server at http://localhost:8000
 **TL;DR command list**
 
     composer first-install
-    composer full-install
+    composer full-update
     
 **Make sure you set the correct database connection information before running the migrations** [Environment variables](#environment-variables)
 
